@@ -3,7 +3,41 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/EAD/ead_frontend/app/src/main/res/layout/activity_main.xml" value="0.17255434782608695" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/contact_us_input.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/credit_card_bottum.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/credit_card_card_holders.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/credit_card_top.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/dash_brief_circle.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/dashboardimg_background.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/fund_add_button.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/fund_border_red.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/fund_main_button.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/fund_submit_button.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/ic_fund_transaction.xml" value="0.1185" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1185" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/ic_menu_camera.xml" value="0.1185" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1185" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/ic_search.xml" value="0.1185" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/logo_background.xml" value="0.1185" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/payee_bank_name.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/profile_img_background.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/rkbuttons.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/drawable/rkinputs.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/layout/activity_dashboard_brief.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/layout/add_station.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/layout/content_main.xml" value="0.11458333333333333" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/layout/credit_card_details.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/layout/credit_card_recycle.xml" value="0.23854166666666668" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/layout/fragment_home.xml" value="0.17980072463768115" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/layout/fund_main.xml" value="0.11458333333333333" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/layout/fund_payee_list.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/layout/fund_summary.xml" value="0.11458333333333333" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/layout/nav_header_main.xml" value="0.1" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/menu/activity_main_drawer.xml" value="0.11614583333333334" />
+        <entry key="..\:/EAD/ead_frontend/app/src/main/res/mipmap-xxhdpi/dashboardimg.xml" value="0.1" />
       </map>
     </option>
   </component>

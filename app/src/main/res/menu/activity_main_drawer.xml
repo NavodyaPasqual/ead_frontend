@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/item2"
+            android:title="Payee Management" />
+        <item android:id="@+id/item3"
+            android:title="Biller Management" />
+        <item android:id="@+id/item4"
+            android:title="Card Management" />
+        <item android:id="@+id/item5"
+            android:title="Open account" />
+        <item android:id="@+id/item6"
+            android:title="Instant Card Advance" />
+        <item android:id="@+id/item7"
+            android:title="Service Request" />
+        <item android:id="@+id/item8"
+            android:title="Contact US" />
+        <item android:id="@+id/item9"
+            android:title="FAQ" />
+        <item android:id="@+id/item10"
+            android:title="Terms and Conditions" />
+        <item android:id="@+id/item11"
+            android:title="Setting" />
+        <item android:id="@+id/item12"
+            android:title="Logout" />
+    </group>
+
+</menu>

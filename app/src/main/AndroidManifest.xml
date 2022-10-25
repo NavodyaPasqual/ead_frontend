@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.ead_frontend">
 
     <application
@@ -11,13 +12,27 @@
         android:theme="@style/Theme.Ead_frontend">
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AddStation"
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".ui.fund.Credit_card_details"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".DashboardBrief"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar"
+            tools:ignore="Instantiatable" />
     </application>
 
 </manifest>
