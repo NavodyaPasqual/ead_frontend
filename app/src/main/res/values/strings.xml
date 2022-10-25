@@ -1,3 +1,77 @@
 <resources>
-    <string name="app_name">ead_frontend</string>
+    <string name="app_name">CEYPETCO</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="Dialog">diaog</string>
+    <string-array name="payee_list">
+        <item>Select a payee</item>
+        <item>SLIIT</item>
+        <item>Navodya Pasqual</item>
+        <item>Dilini Pasqual</item>
+        <item>Prabavi Ranaveera</item>
+    </string-array>
+    <string-array name="bank_list">
+        <item>Select a bank</item>
+        <item>NDB</item>
+        <item>BOC</item>
+        <item>PB</item>
+        <item>RDB</item>
+    </string-array>
+    <string-array name="update_bank_list">
+        <item>BOC</item>
+        <item>NDB</item>
+        <item>PB</item>
+        <item>RDB</item>
+    </string-array>
+    <string-array name="account_type_list">
+        <item>Select a account type</item>
+        <item>Saving Account</item>
+        <item>Current Account</item>
+    </string-array>
+    <string-array name="update_account_type_list">
+        <item>Saving Account</item>
+        <item>Current Account</item>
+    </string-array>
+    <string-array name="Service_provider">
+        <item>Select a service provider</item>
+        <item>Dialog</item>
+        <item>SLT</item>
+        <item>Mobitel</item>
+    </string-array>
+    <string-array name="biller_category">
+        <item>Select a biller category</item>
+        <item>Electricity</item>
+        <item>Insurance</item>
+        <item>Telephone</item>
+    </string-array>
+    <string-array name="biller_nickname">
+        <item>Select a biller</item>
+        <item>Dialog</item>
+        <item>Mobitel</item>
+        <item>SLT</item>
+    </string-array>
+    <string name="Create_Account_Selection_Button">Create NEOS Account</string>
+    <string name="Login_Selection_Btn">Log IN</string>
+    <string name="Welcome_Massage">Hi There Welcome !</string>
+    <string name="Open_NDB_Account">* New to NDB? Open Account Here</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_neos_registation_basic_page">NeosRegistationBasicPage</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_basic_neos_registation_page">BasicNeosRegistationPage</string>
 </resources>
