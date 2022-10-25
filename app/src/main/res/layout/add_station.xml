@@ -63,7 +63,7 @@ android:layout_height="match_parent">
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
-                    android:hint="Service Provider"
+                    android:hint="Shed ID"
                     android:textColorHint="#403C3C"
                     android:textSize="15sp" />
 
@@ -93,7 +93,7 @@ android:layout_height="match_parent">
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
-                    android:hint="Biller Category"
+                    android:hint="Registration Number"
                     android:textColorHint="#403C3C"
                     android:textSize="15sp" />
 
@@ -122,7 +122,7 @@ android:layout_height="match_parent">
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
-                    android:hint="Nickname"
+                    android:hint="Name"
                     android:textColorHint="#403C3C"
                     android:textSize="15sp" />
 
@@ -134,7 +134,6 @@ android:layout_height="match_parent">
                     android:layout_marginTop="27dp"
                     android:layout_marginRight="5dp"
                     android:background="@drawable/fund_border_blue"
-                    android:hint="Dialog"
                     android:inputType="text"
                     android:padding="10dp"
                     android:textColor="#686161"
@@ -154,7 +153,7 @@ android:layout_height="match_parent">
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
-                    android:hint="Reference Number"
+                    android:hint="Address"
                     android:textColorHint="#403C3C"
                     android:textSize="15sp" />
 
@@ -166,18 +165,12 @@ android:layout_height="match_parent">
                     android:layout_marginTop="27dp"
                     android:layout_marginRight="5dp"
                     android:background="@drawable/fund_border_blue"
-                    android:hint="123 675 867 857"
                     android:inputType="text"
                     android:padding="10dp"
                     android:textColor="#686161"
                     android:textColorHint="#686161"
                     android:textSize="14sp" />
             </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -198,6 +191,10 @@ android:layout_height="match_parent">
                     android:textColor="@color/red"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>
