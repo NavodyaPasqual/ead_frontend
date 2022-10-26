@@ -8,7 +8,7 @@ import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.ead_frontend.MainActivity;
+import com.example.ead_frontend.ui.home.MainActivity;
 import com.example.ead_frontend.R;
 
 public class FuelType extends AppCompatActivity {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ead_frontend.user.UserProfile"
+    tools:context="com.example.ead_frontend.ui.user.UserProfile"
     android:background="@drawable/credit_card_bottum"
     android:orientation="vertical">
     <RelativeLayout

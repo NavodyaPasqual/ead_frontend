@@ -1,4 +1,4 @@
-package com.example.ead_frontend.user;
+package com.example.ead_frontend.ui.user;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.ead_frontend.R;
 
-public class UserProfile extends AppCompatActivity {
+public class UserRegistration extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_profile);
+        setContentView(R.layout.activity_user_registration);
     }
 }

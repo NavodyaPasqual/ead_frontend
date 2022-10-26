@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".user.UserRegistration"
+    tools:context=".ui.user.UserRegistration"
     android:scrollbars="vertical"
     android:background="@drawable/credit_card_top">
     <LinearLayout
