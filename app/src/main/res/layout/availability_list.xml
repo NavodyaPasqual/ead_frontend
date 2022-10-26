@@ -26,6 +26,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="#00FFFFFF"
+                android:onClick="sendToHome"
                 android:src="@drawable/ic_back" />
 
             <TextView
@@ -96,7 +97,7 @@
                     <RelativeLayout
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="14dp"
                         android:layout_marginBottom="14dp"
                         android:background="@drawable/payee_bank_name">
@@ -118,7 +119,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="0dp"
                         android:padding="15dp"
                         android:text="Address : Main Road, Horana"
                         android:textColor="#514949"
@@ -163,7 +164,7 @@
                     <RelativeLayout
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="14dp"
                         android:layout_marginBottom="14dp"
                         android:background="@drawable/payee_bank_name">
@@ -185,9 +186,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="0dp"
                         android:padding="15dp"
-                        android:text="Address : Galle Road, Panadura"
+                        android:text="Address : Main Road, Malabe"
                         android:textColor="#514949"
                         android:textSize="15dp"
                         android:textStyle="bold" />
@@ -197,7 +198,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="0dp"
                         android:padding="15dp"
                         android:textStyle="bold"
                         android:text="Diesel : Available"
@@ -229,7 +230,7 @@
                     <RelativeLayout
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="14dp"
                         android:layout_marginBottom="14dp"
                         android:background="@drawable/payee_bank_name">
@@ -251,7 +252,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="0dp"
                         android:padding="15dp"
                         android:text="Address : Main Road, Horana"
                         android:textColor="#514949"
@@ -263,7 +264,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="0dp"
                         android:padding="15dp"
                         android:textStyle="bold"
                         android:text="Diesel : Available"
@@ -296,7 +297,7 @@
                     <RelativeLayout
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="14dp"
                         android:layout_marginBottom="14dp"
                         android:background="@drawable/payee_bank_name">
@@ -318,7 +319,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="0dp"
                         android:padding="15dp"
                         android:text="Address : Main Road, Horana"
                         android:textColor="#514949"
@@ -330,7 +331,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="0dp"
                         android:padding="15dp"
                         android:textStyle="bold"
                         android:text="Petrol : Available"
