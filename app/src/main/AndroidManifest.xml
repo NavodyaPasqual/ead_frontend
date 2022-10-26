@@ -28,22 +28,16 @@
             android:name=".ui.stationOwner.FuelType"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ui.stationOwner.PetrolArrival"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
-
         </activity>
         <activity
             android:name=".ui.stationOwner.DieselArrival"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
-
         </activity>
         <activity
             android:name=".ui.stationOwner.AvailabilityList"
@@ -52,14 +46,21 @@
         </activity>
         <activity android:name=".ui.user.UserLogin"
             android:exported="true"
-            android:theme="@style/Theme.Ead_frontend.NoActionBar"/>
+            android:theme="@style/Theme.Ead_frontend.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ui.user.UserRegistration"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar"/>
         <activity android:name=".ui.user.UserProfile"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar"/>
-
+        <activity android:name=".ui.user.UserUpdateDelete"
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar"/>
         <activity
             android:name=".ui.queue.queue_create"
             android:exported="true"
