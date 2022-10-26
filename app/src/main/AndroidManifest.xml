@@ -14,13 +14,37 @@
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".ui.stationOwner.ShedRegistration"
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".ui.stationOwner.FuelType"
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".AddStation"
+            android:name=".ui.stationOwner.PetrolArrival"
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".ui.stationOwner.DieselArrival"
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".ui.stationOwner.AvailabilityList"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
 
