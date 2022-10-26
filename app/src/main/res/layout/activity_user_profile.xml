@@ -20,6 +20,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:background="#00FFFFFF"
+            android:onClick="sendToHome"
             android:src="@drawable/ic_back" />
 
         <TextView
