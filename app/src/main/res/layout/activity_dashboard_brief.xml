@@ -88,6 +88,7 @@
         android:layout_marginTop="28dp"
         app:cardCornerRadius="50dp"
         app:cardElevation="4dp"
+        android:onClick="sendToMyProfile"
         app:cardMaxElevation="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView6">
@@ -181,7 +182,7 @@
         app:cardElevation="4dp"
         app:cardMaxElevation="4dp"
         app:layout_constraintEnd_toStartOf="@+id/cardView16"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintStart_toEndOf="@+id/cardView14"
         app:layout_constraintTop_toBottomOf="@+id/cardView13">
 
@@ -282,8 +283,8 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="Bill Payments"
+        android:layout_marginStart="25dp"
+        android:text="My Profile"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView12" />
@@ -292,10 +293,10 @@
         android:id="@+id/textView23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fund Transfer"
+        android:text="Petrol Status"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/textView24"
-        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toEndOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/cardView13" />
 
@@ -303,8 +304,8 @@
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
-        android:text="Inbox"
+        android:layout_marginEnd="20dp"
+        android:text="Diesel Status"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView15" />
@@ -313,8 +314,8 @@
         android:id="@+id/textView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="Special Offers"
+        android:layout_marginStart="40dp"
+        android:text="Shed"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView14" />
@@ -323,10 +324,10 @@
         android:id="@+id/textView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rates"
+        android:text="Queue"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/textView27"
-        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toEndOf="@+id/textView25"
         app:layout_constraintTop_toBottomOf="@+id/cardView17" />
 
@@ -345,8 +346,8 @@
         android:id="@+id/textView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="Calculator"
+        android:layout_marginStart="40dp"
+        android:text="Setting"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView19" />
@@ -355,9 +356,10 @@
         android:id="@+id/textView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Payee Management"
+        android:text="About"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/textView30"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toEndOf="@+id/textView28"
         app:layout_constraintTop_toBottomOf="@+id/cardView20" />
 

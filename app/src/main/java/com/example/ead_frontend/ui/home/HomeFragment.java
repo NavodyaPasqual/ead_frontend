@@ -30,18 +30,22 @@ public class HomeFragment extends Fragment {
     FloatingActionButton fab1;
     ImageButton RKibtn01 ;
 
-
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        //
-
 
         homeViewModel =
                 new ViewModelProvider(this).get(com.example.ead_frontend.ui.home.HomeViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+        fab1 = root.findViewById(R.id.floatingActionButton);
 
+        fab1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), DashboardBrief.class);
+                startActivity(intent);
+            }
+        });
 
         return root;
     }

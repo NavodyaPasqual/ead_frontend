@@ -86,9 +86,11 @@
                     android:layout_weight="1"
                     android:layout_height="match_parent">
                     <TextView
+                        android:id="@+id/edit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="EDIT"
+                        android:onClick="sendToEditProfile"
                         android:fontFamily="@font/comfortaa_bold"
                         android:textColor="#49C64E"
                         android:textSize="15sp"
@@ -101,9 +103,11 @@
                     android:layout_weight="1"
                     android:layout_height="match_parent">
                     <TextView
+                        android:id="@+id/delete"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="DELETE"
+                        android:onClick="sendToDeleteProfile"
                         android:fontFamily="@font/comfortaa_bold"
                         android:textColor="#B13A37"
                         android:textSize="15sp"

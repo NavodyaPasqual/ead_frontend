@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.stationOwner.DieselArrival">
+    tools:context=".ui.user.UserUpdateDelete">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        >
+        android:background="@drawable/fund_background_list">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -25,8 +25,6 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="#00FFFFFF"
-                android:contentDescription="TODO"
-                android:minHeight="48dp"
                 android:src="@drawable/ic_back" />
 
             <TextView
@@ -35,10 +33,10 @@
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="@string/queue"
+                android:text="Edit Profile"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -73,76 +71,75 @@
                             android:layout_marginTop="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_marginBottom="5dp"
-                            android:hint="@string/id"
-                            android:textColorHint="#403C3C"
-                            android:textSize="15sp" />
-
-                        <Spinner
-                            android:id="@+id/spinnerId"
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="27dp"
-                            android:layout_marginRight="5dp"
-                            android:background="@drawable/fund_border_blue"
-                            android:textColor="#686161"
-                            android:textColorHint="#686161"
-                            android:textSize="14sp" />
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:hint="@string/nic"
-                            android:textColorHint="#403C3C"
-                            android:textSize="15sp" />
-
-                        <Spinner
-                            android:id="@+id/spinnerNIC"
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="27dp"
-                            android:layout_marginRight="5dp"
-                            android:background="@drawable/fund_border_blue"
-                            android:textColor="#686161"
-                            android:textColorHint="#686161"
-                            android:textSize="14sp" />
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:hint="@string/shed_name"
+                            android:hint="Full Name"
                             android:textColorHint="#403C3C"
                             android:textSize="15sp" />
 
                         <EditText
-                            android:id="@+id/shedName"
+                            android:id="@+id/spinner1"
                             android:layout_width="match_parent"
-                            android:layout_height="48dp"
+                            android:layout_height="36dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="27dp"
                             android:layout_marginRight="5dp"
-                            android:autofillHints=""
+                            android:background="@drawable/fund_border_blue"
+                            android:textColor="#686161"
+                            android:textColorHint="#686161"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="NIC"
+                            android:textColorHint="#403C3C"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/spinner2"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="27dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/fund_border_blue"
+                            android:textColor="#686161"
+                            android:textColorHint="#686161"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Email"
+                            android:textColorHint="#403C3C"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/account_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="27dp"
+                            android:layout_marginRight="5dp"
                             android:background="@drawable/fund_border_blue"
                             android:inputType="text"
                             android:padding="10dp"
@@ -154,21 +151,97 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Mobile Number"
+                            android:textColorHint="#403C3C"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/nick_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="27dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/fund_border_blue"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:textColor="#686161"
+                            android:textColorHint="#686161"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Password"
+                            android:textColorHint="#403C3C"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/nick_name2"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="27dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/fund_border_blue"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:textColor="#686161"
+                            android:textColorHint="#686161"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="5dp"
-                        android:layout_marginBottom="12dp"
-                        android:layout_marginTop="120dp">
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="10dp">
 
                         <Button
-                            android:id="@+id/buttonCreate"
+                            android:id="@+id/button"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginTop="65dp"
-                            android:layout_marginEnd="12dp"
+                            android:layout_marginStart="42dp"
+                            android:layout_marginTop="32dp"
+                            android:layout_marginEnd="42dp"
+                            android:background="@drawable/fund_submit_button"
+                            android:text="EDIT"
+                            android:textColor="@color/red"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/button2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="42dp"
+                            android:layout_marginTop="88dp"
+                            android:layout_marginEnd="42dp"
                             android:layout_marginBottom="30dp"
                             android:background="@drawable/fund_submit_button"
-                            android:text="@string/create"
+                            android:text="DELETE"
                             android:textSize="14sp"
                             android:textStyle="bold" />
                     </RelativeLayout>
