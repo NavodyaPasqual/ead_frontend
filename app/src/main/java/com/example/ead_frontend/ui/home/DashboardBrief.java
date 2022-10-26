@@ -1,4 +1,4 @@
-package com.example.ead_frontend;
+package com.example.ead_frontend.ui.home;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+
+import com.example.ead_frontend.R;
 
 public class DashboardBrief extends AppCompatActivity {
 
