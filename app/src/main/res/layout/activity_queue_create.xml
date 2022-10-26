@@ -78,7 +78,7 @@
                             android:textSize="15sp" />
 
                         <Spinner
-                            android:id="@+id/spinner1"
+                            android:id="@+id/spinnerId"
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:layout_marginLeft="5dp"
@@ -107,7 +107,7 @@
                             android:textSize="15sp" />
 
                         <Spinner
-                            android:id="@+id/spinner2"
+                            android:id="@+id/spinnerNIC"
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:layout_marginLeft="5dp"
@@ -136,7 +136,7 @@
                             android:textSize="15sp" />
 
                         <EditText
-                            android:id="@+id/account_number"
+                            android:id="@+id/shedName"
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:layout_marginLeft="5dp"
@@ -160,7 +160,7 @@
                         android:layout_marginTop="120dp">
 
                         <Button
-                            android:id="@+id/button2"
+                            android:id="@+id/buttonCreate"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
