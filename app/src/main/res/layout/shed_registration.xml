@@ -76,14 +76,16 @@
                             android:textColorHint="#403C3C"
                             android:textSize="15sp" />
 
-                        <Spinner
-                            android:id="@+id/spinner1"
+                        <EditText
+                            android:id="@+id/reg_num"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"
                             android:layout_marginLeft="5dp"
-                            android:layout_marginTop="27dp"
+                            android:layout_marginTop="37dp"
                             android:layout_marginRight="5dp"
                             android:background="@drawable/fund_border_blue"
+                            android:inputType="text"
+                            android:padding="10dp"
                             android:textColor="#686161"
                             android:textColorHint="#686161"
                             android:textSize="14sp" />
@@ -105,14 +107,16 @@
                             android:textColorHint="#403C3C"
                             android:textSize="15sp" />
 
-                        <Spinner
-                            android:id="@+id/spinner2"
+                        <EditText
+                            android:id="@+id/shed_name"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"
                             android:layout_marginLeft="5dp"
-                            android:layout_marginTop="27dp"
+                            android:layout_marginTop="37dp"
                             android:layout_marginRight="5dp"
                             android:background="@drawable/fund_border_blue"
+                            android:inputType="text"
+                            android:padding="10dp"
                             android:textColor="#686161"
                             android:textColorHint="#686161"
                             android:textSize="14sp" />
@@ -135,11 +139,11 @@
                             android:textSize="15sp" />
 
                         <EditText
-                            android:id="@+id/account_number"
+                            android:id="@+id/shed_address"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"
                             android:layout_marginLeft="5dp"
-                            android:layout_marginTop="27dp"
+                            android:layout_marginTop="37dp"
                             android:layout_marginRight="5dp"
                             android:background="@drawable/fund_border_blue"
                             android:inputType="text"
@@ -166,11 +170,11 @@
                             android:textSize="15sp" />
 
                         <EditText
-                            android:id="@+id/nick_name"
+                            android:id="@+id/contact_number"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"
                             android:layout_marginLeft="5dp"
-                            android:layout_marginTop="27dp"
+                            android:layout_marginTop="37dp"
                             android:layout_marginRight="5dp"
                             android:background="@drawable/fund_border_blue"
                             android:inputType="text"

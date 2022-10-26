@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.stationOwner.PetrolArrival">
+    tools:context=".ui.stationOwner.DieselArrival">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:cardBackgroundColor="#FFFFFF"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
@@ -69,77 +69,19 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="15dp"
                             android:layout_marginRight="5dp"
                             android:layout_marginBottom="5dp"
-                            android:hint="Registration Number"
-                            android:textColorHint="#403C3C"
-                            android:textSize="15sp" />
-
-                        <Spinner
-                            android:id="@+id/spinner1"
-                            android:layout_width="match_parent"
-                            android:layout_height="36dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="27dp"
-                            android:layout_marginRight="5dp"
-                            android:background="@drawable/fund_border_blue"
-                            android:textColor="#686161"
-                            android:textColorHint="#686161"
-                            android:textSize="14sp" />
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:hint="Shed Name"
-                            android:textColorHint="#403C3C"
-                            android:textSize="15sp" />
-
-                        <Spinner
-                            android:id="@+id/spinner2"
-                            android:layout_width="match_parent"
-                            android:layout_height="36dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="27dp"
-                            android:layout_marginRight="5dp"
-                            android:background="@drawable/fund_border_blue"
-                            android:textColor="#686161"
-                            android:textColorHint="#686161"
-                            android:textSize="14sp" />
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:hint="Address"
+                            android:hint="Availability"
                             android:textColorHint="#403C3C"
                             android:textSize="15sp" />
 
                         <EditText
-                            android:id="@+id/account_number"
+                            android:id="@+id/petrol_available"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"
                             android:layout_marginLeft="5dp"
-                            android:layout_marginTop="27dp"
+                            android:layout_marginTop="37dp"
                             android:layout_marginRight="5dp"
                             android:background="@drawable/fund_border_blue"
                             android:inputType="text"
@@ -158,37 +100,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:hint="Contact Number"
-                            android:textColorHint="#403C3C"
-                            android:textSize="15sp" />
-
-                        <EditText
-                            android:id="@+id/petrol_arrival"
-                            android:layout_width="match_parent"
-                            android:layout_height="36dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="27dp"
-                            android:layout_marginRight="5dp"
-                            android:background="@drawable/fund_border_blue"
-                            android:inputType="text"
-                            android:padding="10dp"
-                            android:textColor="#686161"
-                            android:textColorHint="#686161"
-                            android:textSize="14sp" />
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="15dp"
                             android:layout_marginRight="5dp"
                             android:layout_marginBottom="5dp"
                             android:hint="Petrol Arrival Time"
@@ -200,7 +112,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="36dp"
                             android:layout_marginLeft="5dp"
-                            android:layout_marginTop="27dp"
+                            android:layout_marginTop="37dp"
                             android:layout_marginRight="5dp"
                             android:background="@drawable/fund_border_blue"
                             android:inputType="text"
@@ -218,7 +130,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="15dp"
                             android:layout_marginRight="5dp"
                             android:layout_marginBottom="5dp"
                             android:hint="Finish Time"
@@ -230,7 +142,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="36dp"
                             android:layout_marginLeft="5dp"
-                            android:layout_marginTop="27dp"
+                            android:layout_marginTop="37dp"
                             android:layout_marginRight="5dp"
                             android:background="@drawable/fund_border_blue"
                             android:inputType="text"
