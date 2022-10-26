@@ -16,13 +16,12 @@ public class FuelType extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fuel_type);
-
     }
 
     //Navigate to previous ui
-    public void backToHome(View view) {
-        Intent intent = new Intent(this,  MainActivity.class);
-        ImageButton image = (ImageButton) findViewById(R.id.back);
+    public void sendToHome(View view) {
+        Intent intent = new Intent(this,  AvailabilityList.class);
+        ImageButton button = (ImageButton) findViewById(R.id.back);
         startActivity(intent);
     }
 

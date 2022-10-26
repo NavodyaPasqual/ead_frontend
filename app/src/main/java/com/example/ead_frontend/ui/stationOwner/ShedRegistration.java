@@ -25,6 +25,12 @@ public class ShedRegistration extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shed_registration);
     }
+
+    public void sendToHome(View view) {
+        Intent intent = new Intent(this,  FuelType.class);
+        ImageButton button = (ImageButton) findViewById(R.id.back);
+        startActivity(intent);
+    }
 }
 
 
