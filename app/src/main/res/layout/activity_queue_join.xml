@@ -75,7 +75,7 @@
                             android:textSize="30sp" />
 
                         <EditText
-                            android:id="@+id/editTextNumber"
+                            android:id="@+id/queueCount"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:autoText="true"
@@ -108,7 +108,7 @@
                         android:orientation="vertical">
 
                         <Button
-                            android:id="@+id/button2"
+                            android:id="@+id/buttonJoin"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="42dp"
