@@ -76,6 +76,7 @@
                 android:visibility="invisible"/>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
@@ -86,7 +87,8 @@
                 android:paddingBottom="20dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:text="Sign Up"
+                android:text="Login"
+                android:onClick="sendToHome"
                 app:cornerRadius="10dp"/>
         </FrameLayout>
         <LinearLayout
@@ -111,6 +113,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/comfortaa_bold"
                 android:text="Sign Up"
+                android:onClick="sendToRegistration"
                 android:textColor="#C16462"
                 android:textStyle="bold"
                 android:layout_marginStart="10dp"

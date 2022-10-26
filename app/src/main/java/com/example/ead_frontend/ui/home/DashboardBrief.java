@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.example.ead_frontend.R;
+import com.example.ead_frontend.ui.user.UserProfile;
 
 public class DashboardBrief extends AppCompatActivity {
 
@@ -26,5 +27,10 @@ public class DashboardBrief extends AppCompatActivity {
                 finish();
             }
         });
+    }
+    public void sendToMyProfile(View view) {
+        Intent intent = new Intent(this, UserProfile.class);
+        CardView button = (CardView) findViewById(R.id.cardView12);
+        startActivity(intent);
     }
 }
