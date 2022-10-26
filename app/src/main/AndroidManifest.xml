@@ -11,16 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ead_frontend">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.home.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
         </activity>
-
+        <activity
+            android:name=".ui.home.DashboardBrief"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".ui.stationOwner.ShedRegistration"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
-
         </activity>
         <activity
             android:name=".ui.stationOwner.FuelType"
@@ -47,16 +49,16 @@
             android:name=".ui.stationOwner.AvailabilityList"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
-
         </activity>
-        <activity
-            android:name=".ui.fund.Credit_card_details"
-            android:theme="@style/Theme.Ead_frontend.NoActionBar"
-            tools:ignore="Instantiatable" />
-        <activity
-            android:name=".DashboardBrief"
-            android:theme="@style/Theme.Ead_frontend.NoActionBar"
-            tools:ignore="Instantiatable" />
+        <activity android:name=".ui.user.UserLogin"
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar"/>
+        <activity android:name=".ui.user.UserRegistration"
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar"/>
+        <activity android:name=".ui.user.UserProfile"
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar"/>
     </application>
 
 </manifest>
