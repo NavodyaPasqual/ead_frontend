@@ -1,4 +1,4 @@
-package com.example.ead_frontend;
+package com.example.ead_frontend.ui.home;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.ead_frontend.R;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
