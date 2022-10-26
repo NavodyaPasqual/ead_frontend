@@ -11,33 +11,44 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ead_frontend">
         <activity
-            android:name=".user.UserProfile"
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".ui.stationOwner.ShedRegistration"
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".ui.stationOwner.FuelType"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".user.UserLogin"
+            android:name=".ui.stationOwner.PetrolArrival"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
 
         </activity>
         <activity
-            android:name=".user.UserRegistration"
+            android:name=".ui.stationOwner.DieselArrival"
             android:exported="true"
-            android:theme="@style/Theme.Ead_frontend.NoActionBar"></activity>
+            android:theme="@style/Theme.Ead_frontend.NoActionBar">
+
+        </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.stationOwner.AvailabilityList"
             android:exported="true"
-            android:theme="@style/Theme.Ead_frontend.NoActionBar"></activity>
-        <activity
-            android:name=".AddStation"
-            android:exported="true"
-            android:theme="@style/Theme.Ead_frontend.NoActionBar" />
+            android:theme="@style/Theme.Ead_frontend.NoActionBar">
+
+        </activity>
         <activity
             android:name=".ui.fund.Credit_card_details"
             android:theme="@style/Theme.Ead_frontend.NoActionBar"
@@ -46,10 +57,6 @@
             android:name=".DashboardBrief"
             android:theme="@style/Theme.Ead_frontend.NoActionBar"
             tools:ignore="Instantiatable" />
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
