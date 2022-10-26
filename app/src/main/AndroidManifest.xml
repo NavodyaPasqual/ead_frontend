@@ -59,6 +59,25 @@
         <activity android:name=".ui.user.UserProfile"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar"/>
+
+        <activity
+            android:name=".ui.queue.queue_create"
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".ui.queue.queue_exit"
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".ui.queue.queue_join"
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar">
+        </activity>
+
     </application>
 
 </manifest>
