@@ -11,44 +11,44 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ead_frontend">
         <activity
+            android:name=".queue_join"
+            android:exported="false" />
+        <activity
+            android:name=".queue_create"
+            android:exported="false" />
+        <activity
+            android:name=".queue_exit"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Ead_frontend.NoActionBar">
-        </activity>
-
+            android:theme="@style/Theme.Ead_frontend.NoActionBar" />
         <activity
             android:name=".ui.stationOwner.ShedRegistration"
             android:exported="true"
-            android:theme="@style/Theme.Ead_frontend.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.Ead_frontend.NoActionBar" />
         <activity
             android:name=".ui.stationOwner.FuelType"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".ui.stationOwner.PetrolArrival"
             android:exported="true"
-            android:theme="@style/Theme.Ead_frontend.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.Ead_frontend.NoActionBar" />
         <activity
             android:name=".ui.stationOwner.DieselArrival"
             android:exported="true"
-            android:theme="@style/Theme.Ead_frontend.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.Ead_frontend.NoActionBar" />
         <activity
             android:name=".ui.stationOwner.AvailabilityList"
             android:exported="true"
-            android:theme="@style/Theme.Ead_frontend.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.Ead_frontend.NoActionBar" />
         <activity
             android:name=".ui.fund.Credit_card_details"
             android:theme="@style/Theme.Ead_frontend.NoActionBar"
