@@ -15,7 +15,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#8E152C"
+            android:background="#601512"
             android:visibility="visible"
             app:popupTheme="@style/Theme.Ead_frontend.PopupOverlay">
             <RelativeLayout
@@ -27,19 +27,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="NDB"
-                    android:textColor="#E65E5A"
+                    android:fontFamily="@font/aclonica"
+                    android:text="CEYPETCO"
+                    android:textColor="@color/second"
                     android:textSize="25dp"
                     android:textStyle="bold" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="54dp"
-                android:text="neos"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                android:textColor="#58BBD5"
-                />
+
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
 

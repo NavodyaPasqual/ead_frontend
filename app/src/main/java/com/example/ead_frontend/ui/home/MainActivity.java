@@ -6,11 +6,18 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.ead_frontend.R;
+import com.example.ead_frontend.ui.queue.queue_create;
+import com.example.ead_frontend.ui.stationOwner.AvailabilityList;
+import com.example.ead_frontend.ui.stationOwner.UpdateHome;
+import com.example.ead_frontend.ui.user.UserProfile;
+import com.example.ead_frontend.ui.user.UserUpdateDelete;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.cardview.widget.CardView;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -68,5 +75,27 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void sendToJoinQueue(View view) {
+        Intent intent = new Intent(this,  queue_create.class);
+        CardView button = (CardView) findViewById(R.id.card1);
+        startActivity(intent);
+    }
+
+    public void sendToAvailableShed(View view) {
+        Intent intent = new Intent(this,  AvailabilityList.class);
+        CardView button = (CardView) findViewById(R.id.card2);
+        startActivity(intent);
+    }
+    public void sendToMyProfile(View view) {
+        Intent intent = new Intent(this,  UserProfile.class);
+        CardView button = (CardView) findViewById(R.id.card3);
+        startActivity(intent);
+    }
+    public void sendToShedOwner(View view) {
+        Intent intent = new Intent(this,  UpdateHome.class);
+        CardView button = (CardView) findViewById(R.id.card4);
+        startActivity(intent);
     }
 }
