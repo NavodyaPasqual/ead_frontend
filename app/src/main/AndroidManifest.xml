@@ -33,11 +33,6 @@
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
         </activity>
         <activity
-            android:name=".ui.stationOwner.FuelType"
-            android:exported="true"
-            android:theme="@style/Theme.Ead_frontend.NoActionBar">
-        </activity>
-        <activity
             android:name=".ui.stationOwner.PetrolArrival"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
@@ -49,6 +44,11 @@
         </activity>
         <activity
             android:name=".ui.stationOwner.AvailabilityList"
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.stationOwner.UpdateHome"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
         </activity>

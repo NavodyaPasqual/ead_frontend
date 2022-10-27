@@ -27,7 +27,7 @@ public class ShedRegistration extends AppCompatActivity{
     }
 
     public void sendToHome(View view) {
-        Intent intent = new Intent(this,  FuelType.class);
+        Intent intent = new Intent(this,  UpdateHome.class);
         ImageButton button = (ImageButton) findViewById(R.id.back);
         startActivity(intent);
     }
