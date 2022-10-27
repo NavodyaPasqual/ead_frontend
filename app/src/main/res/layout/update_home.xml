@@ -56,7 +56,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="8dp"
-                android:background="@drawable/img_petrol_status" />
+                android:background="@drawable/img_shed_reg" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -84,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:background="@drawable/station_main_button"
-            android:onClick="sendToPetrolArrival">
+            android:onClick="sendToListUpdate">
 
             <RelativeLayout
                 android:layout_width="110dp"
@@ -93,7 +93,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:background="@drawable/img_diesel_status" />
+                android:background="@drawable/img_petrol_status" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -101,7 +101,7 @@
                 android:layout_marginStart="130dp"
                 android:layout_marginTop="28dp"
                 android:padding="14dp"
-                android:text="Update Petrol Arrival"
+                android:text="Update Fuel Arrival"
                 android:textColor="#DCD3D3"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -116,11 +116,11 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/update_diesel"
+            android:id="@+id/delete_diesel"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:background="@drawable/station_main_button"
-            android:onClick="sendToDieselArrival">
+            android:onClick="sendToListDelete">
 
             <RelativeLayout
                 android:layout_width="110dp"
@@ -137,7 +137,7 @@
                 android:layout_marginStart="130dp"
                 android:layout_marginTop="28dp"
                 android:padding="14dp"
-                android:text="Update Diesel Arrival"
+                android:text="Delete Fuel Arrival"
                 android:textColor="#DCD3D3"
                 android:textSize="16sp"
                 android:textStyle="bold" />

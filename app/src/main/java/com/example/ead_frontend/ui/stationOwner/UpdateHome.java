@@ -32,17 +32,15 @@ public class UpdateHome extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //Send to petrol status update form
-    public void sendToPetrolArrival(View view) {
-        Intent intent = new Intent(this,  PetrolArrival.class);
+    public void sendToListUpdate(View view) {
+        Intent intent = new Intent(this,  ListUpdate.class);
         RelativeLayout image = (RelativeLayout) findViewById(R.id.update_petrol);
         startActivity(intent);
     }
 
-    //Send to diesel status update form
-    public void sendToDieselArrival(View view) {
-        Intent intent = new Intent(this,  DieselArrival.class);
-        RelativeLayout image = (RelativeLayout) findViewById(R.id.update_diesel);
+    public void sendToListDelete(View view) {
+        Intent intent = new Intent(this,  ListUpdate.class);
+        RelativeLayout image = (RelativeLayout) findViewById(R.id.delete_diesel);
         startActivity(intent);
     }
 

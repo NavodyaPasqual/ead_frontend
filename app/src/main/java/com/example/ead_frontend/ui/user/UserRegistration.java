@@ -37,7 +37,7 @@ public class UserRegistration extends AppCompatActivity {
 
     String sFullName, sNIC, sEmail, sMobile, sPassword;
 
-    String url = "http://192.168.1.3:8081/api/user/register";
+    String url = "http://192.168.43.136:8081/api/user/register";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

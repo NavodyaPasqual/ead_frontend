@@ -38,17 +38,17 @@
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
         </activity>
         <activity
-            android:name=".ui.stationOwner.DieselArrival"
-            android:exported="true"
-            android:theme="@style/Theme.Ead_frontend.NoActionBar">
-        </activity>
-        <activity
             android:name=".ui.stationOwner.AvailabilityList"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
         </activity>
         <activity
             android:name=".ui.stationOwner.UpdateHome"
+            android:exported="true"
+            android:theme="@style/Theme.Ead_frontend.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.stationOwner.ListUpdate"
             android:exported="true"
             android:theme="@style/Theme.Ead_frontend.NoActionBar">
         </activity>
