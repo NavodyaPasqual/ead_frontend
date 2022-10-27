@@ -19,7 +19,7 @@ public class PetrolArrival extends AppCompatActivity {
     }
 
     public void sendToHome(View view) {
-        Intent intent = new Intent(this,  ShedRegistration.class);
+        Intent intent = new Intent(this,  UpdateHome.class);
         ImageButton button = (ImageButton) findViewById(R.id.back);
         startActivity(intent);
     }

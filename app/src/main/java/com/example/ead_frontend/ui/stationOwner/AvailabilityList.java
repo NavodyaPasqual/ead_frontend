@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ead_frontend.R;
+import com.example.ead_frontend.ui.home.MainActivity;
 
 public class AvailabilityList extends AppCompatActivity {
 
@@ -17,7 +18,7 @@ public class AvailabilityList extends AppCompatActivity {
         setContentView(R.layout.availability_list);
     }
     public void sendToHome(View view) {
-        Intent intent = new Intent(this,  FuelType.class);
+        Intent intent = new Intent(this,  MainActivity.class);
         ImageButton button = (ImageButton) findViewById(R.id.back);
         startActivity(intent);
     }
