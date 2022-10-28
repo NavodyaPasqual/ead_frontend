@@ -66,42 +66,42 @@ public class UserProfile extends AppCompatActivity {
         number.setText(Number);
         password.setText(Password);
 
-        delete.setOnClickListener(new View.OnClickListener() {
-              @Override
-              public void onClick(View view) {
-                  deleteUser(Password);
-              }
-          }
-        );
+//        delete.setOnClickListener(new View.OnClickListener() {
+//              @Override
+//              public void onClick(View view) {
+//                  deleteUser(Password);
+//              }
+//          }
+//        );
     }
 
-    private void deleteUser(String Password) {
-        String url = "http://192.168.1.5:8081/api/user/profile/delete/" + Password;
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.DELETE, url, null, new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
-                try {
-                    if(response.getBoolean("success")) {
-                        Toast.makeText(UserProfile.this, "User Deleted", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(UserProfile.this, UserLogin.class);
-                        startActivity(intent);
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(UserProfile.this, error.toString(), Toast.LENGTH_SHORT).show();
-            }
-        }
-        );
-
-        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(1000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(jsonObjectRequest);
-    }
+//    private void deleteUser(String Password) {
+//        String url = "http://192.168.1.5:8081/api/user/profile/delete/" + Password;
+//        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.DELETE, url, null, new Response.Listener<JSONObject>() {
+//            @Override
+//            public void onResponse(JSONObject response) {
+//                try {
+//                    if(response.getBoolean("success")) {
+//                        Toast.makeText(UserProfile.this, "User Deleted", Toast.LENGTH_SHORT).show();
+//                        Intent intent = new Intent(UserProfile.this, UserLogin.class);
+//                        startActivity(intent);
+//                    }
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                Toast.makeText(UserProfile.this, error.toString(), Toast.LENGTH_SHORT).show();
+//            }
+//        }
+//        );
+//
+//        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(1000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+//        RequestQueue requestQueue = Volley.newRequestQueue(this);
+//        requestQueue.add(jsonObjectRequest);
+//    }
 
     public void sendToHome(View view) {
         Intent intent = new Intent(this, MainActivity.class);
@@ -109,9 +109,14 @@ public class UserProfile extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void actionLogout(View view) {
+        Intent intent = new Intent(this, UserLogin.class);
+        ImageButton button = (ImageButton) findViewById(R.id.back);
+        startActivity(intent);
+    }
+
     public void sendToEditProfile(View view) {
         Intent intent = new Intent(this, UserUpdateDelete.class);
-        Button button = (Button) findViewById(R.id.edit);
         startActivity(intent);
     }
 
