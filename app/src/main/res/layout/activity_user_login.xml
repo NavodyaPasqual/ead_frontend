@@ -26,7 +26,6 @@
             android:textStyle="bold"/>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/editSignUpEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -35,7 +34,8 @@
             android:textColorHint="@color/white"
             app:boxStrokeColor="@color/white">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
+                android:id="@+id/editSignInEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/comfortaa_bold"
@@ -44,7 +44,6 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/editSignUpPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -55,7 +54,8 @@
             android:textColorHint="@color/white"
             app:boxStrokeColor="@color/white">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
+                android:id="@+id/editSignInPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/comfortaa_bold"
