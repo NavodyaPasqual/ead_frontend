@@ -14,6 +14,6 @@ public class EndPoints {
 
 
     //Queue Endpoints
-
+    public static String QUEUE_CREATE_URL = BASE_URL + "queue/create";
 
 }
