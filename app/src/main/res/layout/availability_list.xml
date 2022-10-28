@@ -75,7 +75,7 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/item1"
+            android:id="@+id/item2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
@@ -103,7 +103,184 @@
                         android:background="@drawable/payee_bank_name">
 
                         <TextView
-                            android:id="@+id/shedname"
+                            android:id="@+id/shedname1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="CEYPETCO Ingiriya"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/shedaddress1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="0dp"
+                        android:padding="10dp"
+                        android:text="Address : Main Road, ngiriya"
+                        android:textColor="#514949"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/pavailable1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="10dp"
+                        android:text="Petrol : Available"
+                        android:textColor="#ba160c"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/davailable1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="29dp"
+                        android:padding="10dp"
+                        android:text="Diesel : Not Available"
+                        android:textColor="#ba160c"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/item1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="15dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/payee_bank_name">
+
+                    <TextView
+                        android:id="@+id/shedname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="CEYPETCO Horana"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/shedaddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="0dp"
+                    android:padding="10dp"
+                    android:text="Address : Main Road, Horana"
+                    android:textColor="#514949"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/pavailable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:padding="10dp"
+                    android:text="Petrol : Not Available"
+                    android:textColor="#ba160c"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/davailable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="29dp"
+                    android:padding="10dp"
+                    android:text="Diesel : Available"
+                    android:textColor="#ba160c"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/item3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@drawable/payee_bank_name">
+
+                        <TextView
+                            android:id="@+id/shedname3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
@@ -117,50 +294,138 @@
                     </RelativeLayout>
 
                     <TextView
-                        android:id="@+id/shedaddress"
+                        android:id="@+id/shedaddress3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="0dp"
-                        android:padding="15dp"
+                        android:padding="10dp"
                         android:text="Address : Main Road, Horana"
                         android:textColor="#514949"
                         android:textSize="15dp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/pavailable"
+                        android:id="@+id/pavailable3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginRight="182dp"
-                        android:layout_marginBottom="-2dp"
-                        android:padding="15dp"
-                        android:text="Petrol : "
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="10dp"
+                        android:text="Petrol : Available"
                         android:textColor="#ba160c"
                         android:textSize="15dp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/davailable"
+                        android:id="@+id/davailable3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginRight="14dp"
-                        android:layout_marginBottom="3dp"
-                        android:padding="5dp"
-                        android:text="Diesel :"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="29dp"
+                        android:padding="10dp"
+                        android:text="Diesel : Available"
                         android:textColor="#ba160c"
                         android:textSize="15dp"
                         android:textStyle="bold" />
 
                 </RelativeLayout>
-
             </androidx.cardview.widget.CardView>
+
         </RelativeLayout>
 
+        <RelativeLayout
+            android:id="@+id/item4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@drawable/payee_bank_name">
+
+                        <TextView
+                            android:id="@+id/shedname4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="CEYPETCO Horana"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/shedaddress4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="0dp"
+                        android:padding="10dp"
+                        android:text="Address : Main Road, Horana"
+                        android:textColor="#514949"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/pavailable4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="10dp"
+                        android:text="Petrol : Available"
+                        android:textColor="#ba160c"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/davailable4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="29dp"
+                        android:padding="10dp"
+                        android:text="Diesel : Available"
+                        android:textColor="#ba160c"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
 
     </LinearLayout>
 

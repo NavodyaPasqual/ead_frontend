@@ -1,174 +1,152 @@
 package com.example.ead_frontend.ui.stationOwner;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.DatePickerDialog;
-import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TimePicker;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.ead_frontend.R;
-import com.example.ead_frontend.ui.stationOwner.ListUpdate;
-import com.example.ead_frontend.ui.stationOwner.UpdateHome;
-import com.google.android.material.button.MaterialButton;
+import com.example.ead_frontend.ui.user.UserLogin;
+import com.example.ead_frontend.ui.user.UserProfile;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.HashMap;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.ead_frontend.R;
-import com.example.ead_frontend.ui.home.MainActivity;
+import java.util.Map;
 
 public class PetrolArrival extends AppCompatActivity {
 
-    //boolean availabilityCheck = false;
-    Intent intent;
-    ImageView signOutIcon;
-    AlertDialog dialog;
-    EditText editPetrolArrival, editPetrolTime, editPetrolFinish, editDieselArrival, editDieselTime, editDieselFinish;
-    Button update_fuel, delete_fuel;
-
-    String sPetrolArrival, sPetrolTime, sPetrolFinish, sDieselArrival, sDieselTime, sDieselFinish;
+    TextView editPetrolArrival, editPetrolTime, editPetrolFinish, editDieselArrival, editDieselTime, editDieselFinish, editId;
+    Button button, button2;
+    String base = "635bb1e7c9b7692150351327";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.list_update);
-
-        String Id = getIntent().getExtras().getString("id","defaultKey");
-
-        Toast.makeText(PetrolArrival.this, "Id retrieved success "+Id, Toast.LENGTH_SHORT).show();
+        setContentView(R.layout.petrol_arrival);
 
         editPetrolArrival = findViewById(R.id.editPetrolArrival);
         editPetrolTime = findViewById(R.id.editPetrolTime);
         editPetrolFinish = findViewById(R.id.editPetrolFinish);
         editDieselArrival = findViewById(R.id.editDieselArrival);
         editDieselTime = findViewById(R.id.editDieselTime);
-        editDieselFinish =  findViewById(R.id.editDieselFinish);
-        RequestQueue requestQueue = Volley.newRequestQueue(PetrolArrival.this);
+        editDieselFinish = findViewById(R.id.editDieselFinish);
+        button = findViewById(R.id.button);
+        button2 = findViewById(R.id.button2);
 
-        getFuelStationByID();
-
-        update_fuel.setOnClickListener(new View.OnClickListener() {
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    sPetrolArrival = editPetrolArrival.getText().toString();
-                    sPetrolTime = editPetrolTime.getText().toString();
-                    sPetrolFinish = editPetrolFinish.getText().toString();
-                    sDieselArrival = editDieselArrival.getText().toString();
-                    sDieselTime = editDieselTime.getText().toString();
-                    sDieselFinish = editDieselFinish.getText().toString();
+                String petrolArrivalTime = editPetrolArrival.getText().toString();
+                String petrolAvailable = editPetrolTime.getText().toString();
+                String petrolFinishTime = editPetrolFinish.getText().toString();
+                String dieselArrivalTime = editDieselArrival.getText().toString();
+                String dieselAvailable = editDieselTime.getText().toString();
+                String dieselFinishTime = editDieselFinish.getText().toString();
+                updateShed(petrolArrivalTime, petrolAvailable, petrolFinishTime, dieselArrivalTime, dieselAvailable, dieselFinishTime);
+            }
+        });
 
-                    String url = "http://192.168.43.136:8081/api/shed";
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deleteUser();
+            }
+        });
+    }
 
-                if (!sPetrolArrival.isEmpty() && !sPetrolTime.isEmpty() && !sPetrolFinish.isEmpty() && !sDieselArrival.isEmpty() && !sDieselTime.isEmpty() && !sDieselFinish.isEmpty()) {
-                    getFuelStationByID();
-                    Toast.makeText(PetrolArrival.this, "New fuel station added", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(PetrolArrival.this, "Fields cannot be empty", Toast.LENGTH_SHORT).show();
+    private void updateShed(String petrolArrivalTime, String petrolAvailable, String petrolFinishTime, String dieselArrivalTime, String dieselAvailable, String dieselFinishTime) {
+        String url = "http://192.168.43.136:8081/api/shed/update/" + base;
+
+        HashMap<String, String> body = new HashMap<>();
+        body.put("petrolArrivalTime", petrolArrivalTime);
+        body.put("petrolAvailable", petrolAvailable);
+        body.put("petrolFinishTime", petrolFinishTime);
+        body.put("dieselArrivalTime", dieselArrivalTime);
+        body.put("dieselAvailable", dieselAvailable);
+        body.put("dieselFinishTime", dieselFinishTime);
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, url, new JSONObject(body), new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    if(response.getBoolean("success")) {
+                        Toast.makeText(PetrolArrival.this, "Arrival time updated", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(PetrolArrival.this, AvailabilityList.class);
+                        startActivity(intent);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
             }
-        });
-
-    }
-
-    public void getFuelStationByID(){
-
-        String url = "http://192.168.43.136:8081/api/shed/:id";
-
-        JsonObjectRequest jsonObjectRequest  = new JsonObjectRequest(
-                Request.Method.GET,
-                url,
-                null,
-                (Response.Listener<JSONObject>) response -> {
-
-                    try {
-                        editPetrolTime.setText((String)response.get("location"));
-                        editDieselTime.setText((String)response.get("stationName"));
-
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-
-
-                }, new Response.ErrorListener() {
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(PetrolArrival.this,"Station fetching failed - "+error.getMessage(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(com.example.ead_frontend.ui.stationOwner.PetrolArrival.this, error.toString(), Toast.LENGTH_SHORT).show();
             }
-        });
-
-
-    }
-
-    public void createFuelStation(String url,String station,String location,HashMap<String,Boolean> availabilities,String arrivaleTime,RequestQueue requestQueue,String email){
-        String tag_json_obj = "json_obj_req";
-
-        JSONObject requestBody = new JSONObject();
-        JSONObject requestBody1 = new JSONObject();
-
-        try {
-            for (String i:availabilities.keySet()) {
-                requestBody1.put(i,availabilities.get(i));
-            }
-
-            requestBody.put("location", location);
-            requestBody.put("stationName", station);
-            requestBody.put("fuelAvailability", requestBody1);
-            requestBody.put("fuelArrivalTime", arrivaleTime);
-            requestBody.put("fuelFinishTime", arrivaleTime);
-            requestBody.put("email",email);
-//            requestBody.put("arrival", Calendar.getInstance().getTime().toString());
-        } catch (JSONException e) {
-            Toast.makeText(this,"Input value error",Toast.LENGTH_SHORT).show();
         }
+        ) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("Content-Type", "application/json");
+                return params;
+            }
+        };
 
-        JsonObjectRequest jsonObjectRequest  = new JsonObjectRequest(
-                Request.Method.PUT,
-                url,
-                requestBody,
-                (Response.Listener<JSONObject>) response -> {
+        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(1000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(jsonObjectRequest);
 
-                }, new Response.ErrorListener() {
+    }
+
+    private void deleteUser() {
+        String url = "http://192.168.43.136:8081/api/shed/delete/" + base;
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.DELETE, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    if(response.getBoolean("success")) {
+                        Toast.makeText(PetrolArrival.this, "Arrival time Deleted", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(PetrolArrival.this, UpdateHome.class);
+                        startActivity(intent);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(PetrolArrival.this,"Failed to create",Toast.LENGTH_SHORT).show();
+                Toast.makeText(com.example.ead_frontend.ui.stationOwner.PetrolArrival.this, error.toString(), Toast.LENGTH_SHORT).show();
             }
-        });
+        }
+        );
+
+        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(1000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(jsonObjectRequest);
     }
 
-
     public void sendToHome(View view) {
-        Intent intent = new Intent(this,  ListUpdate.class);
+        Intent intent = new Intent(this,  UpdateHome.class);
         ImageButton button = (ImageButton) findViewById(R.id.back);
         startActivity(intent);
     }

@@ -51,28 +51,28 @@ public class ListUpdate extends AppCompatActivity {
         pavailable = findViewById(R.id.pavailable);
         delete = findViewById(R.id.delete);
 
-        SharedPreferences sh = getSharedPreferences("ShedData", MODE_PRIVATE);
-        String RegNo = sh.getString("regNo", "");
-        String ShedName = sh.getString("name", "");
-        String Address = sh.getString("address", "");
-        String Number = sh.getString("_id", "");
-
-        shedname.setText(RegNo);
-        shedaddress.setText(ShedName);
-        davailable.setText(Address);
-        pavailable.setText(Number);
+//        SharedPreferences sh = getSharedPreferences("ShedData", MODE_PRIVATE);
+//        String RegNo = sh.getString("regNo", "");
+//        String ShedName = sh.getString("name", "");
+//        String Address = sh.getString("address", "");
+//        String Number = sh.getString("_id", "");
+//
+//        shedname.setText(RegNo);
+//        shedaddress.setText(ShedName);
+//        davailable.setText(Address);
+//        pavailable.setText(Number);
 
         delete.setOnClickListener(new View.OnClickListener() {
                                       @Override
                                       public void onClick(View view) {
-                                          deleteShed(Number);
+                                          deleteShed();
                                       }
                                   }
         );
     }
 
-    private void deleteShed(String Number) {
-        String url = "http://192.168.43.136:8081/api/shed/delete/" + Number;
+    private void deleteShed() {
+        String url = "http://192.168.43.136:8081/api/shed/delete/" + "6358183d044f1044446e96b5";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.DELETE, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -112,7 +112,7 @@ public class ListUpdate extends AppCompatActivity {
     }
 
     public void sendToDeleteFuel(View view) {
-        Intent intent = new Intent(this,  AvailabilityList.class);
+        Intent intent = new Intent(this,  PetrolArrival.class);
         TextView button = (TextView) findViewById(R.id.delete);
         startActivity(intent);
     }
