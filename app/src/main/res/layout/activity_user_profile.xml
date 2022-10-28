@@ -45,23 +45,25 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="50dp"
                 android:fontFamily="@font/aclonica"
-                android:text="Navodya Tharindi Pasqual"
+                android:text="Name"
                 android:textColor="@color/second"
                 android:textSize="21sp"
                 android:textStyle="normal" />
 
             <TextView
+                android:id="@+id/nic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/comfortaa_bold"
-                android:text="978390838V"
+                android:text="NIC"
                 android:textColor="#5FA3B5"
                 android:textSize="15sp"
                 android:textStyle="normal" />
@@ -85,8 +87,9 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent">
-                    <TextView
+                    <Button
                         android:id="@+id/edit"
+                        android:backgroundTint="@color/black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="EDIT"
@@ -102,12 +105,12 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent">
-                    <TextView
+                    <Button
                         android:id="@+id/delete"
+                        android:backgroundTint="@color/black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="DELETE"
-                        android:onClick="sendToDeleteProfile"
                         android:fontFamily="@font/comfortaa_bold"
                         android:textColor="#B13A37"
                         android:textSize="15sp"
@@ -160,12 +163,13 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/nic2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/alatsi"
-                    android:text="978390838V"
+                    android:text="NIC"
                     android:textColor="@color/black"
                     android:textSize="17dp" />
 
@@ -214,13 +218,14 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_marginTop="20dp"
-                    android:text="navodyapasqual@gmail.com"
-                    android:textColor="@color/black"
                     android:fontFamily="@font/alatsi"
+                    android:text="mail"
+                    android:textColor="@color/black"
                     android:textSize="17dp" />
             </RelativeLayout>
         </LinearLayout>
@@ -267,13 +272,14 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_marginTop="20dp"
-                    android:text="+94718278219"
-                    android:textColor="@color/black"
                     android:fontFamily="@font/alatsi"
+                    android:text="number"
+                    android:textColor="@color/black"
                     android:textSize="17dp" />
             </RelativeLayout>
         </LinearLayout>
@@ -320,12 +326,13 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/alatsi"
-                    android:text="8yhf58h#"
+                    android:text="password"
                     android:textColor="@color/black"
                     android:textSize="17dp" />
             </RelativeLayout>

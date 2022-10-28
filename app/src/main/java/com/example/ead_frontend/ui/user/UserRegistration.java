@@ -1,5 +1,7 @@
 package com.example.ead_frontend.ui.user;
 
+import static com.example.ead_frontend.ui.EndPoints.EndPoints.USER_REGISTRATION_URL;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -37,7 +39,7 @@ public class UserRegistration extends AppCompatActivity {
 
     String sFullName, sNIC, sEmail, sMobile, sPassword;
 
-    String url = "http://192.168.1.3:8081/api/user/register";
+    String url = USER_REGISTRATION_URL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +95,11 @@ public class UserRegistration extends AppCompatActivity {
                     editSignUpEmail.getText().clear();
                     editSignUpPassword.getText().clear();
                     editSignUpConfirmPassword.getText().clear();
+
+                    Intent intent = new Intent(UserRegistration.this, UserLogin.class);
+                    startActivity(intent);
                 }
+
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
