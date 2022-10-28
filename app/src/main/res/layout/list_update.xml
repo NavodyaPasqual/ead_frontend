@@ -84,12 +84,22 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:cardBackgroundColor="#FFFFFF"
-                android:layout_marginTop="5dp"
                 android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="#FFFFFF"
                 app:cardCornerRadius="15dp">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progress_bar"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    />
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -103,6 +113,7 @@
                         android:background="@drawable/payee_bank_name">
 
                         <TextView
+                            android:id="@+id/shedname"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
@@ -116,58 +127,72 @@
                     </RelativeLayout>
 
                     <TextView
+                        android:id="@+id/shedaddress"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="0dp"
                         android:padding="15dp"
-                        android:text="Address : Main Road, Horana"
+                        android:text="Address : "
                         android:textColor="#514949"
                         android:textSize="15dp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/davailable"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginRight="0dp"
                         android:padding="15dp"
-                        android:textStyle="bold"
-                        android:text="Petrol : Available"
+                        android:text="Diesel :"
                         android:textColor="#ba160c"
-                        android:textSize="15dp" />
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/pavailable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="203dp"
+                        android:layout_marginBottom="13dp"
+                        android:padding="5dp"
+                        android:text="Petrol :"
+                        android:textColor="#ba160c"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
                 </RelativeLayout>
 
                 <Button
-                        android:id="@+id/update_fuel"
-                        android:layout_width="120dp"
-                        android:layout_height="50dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginStart="80dp"
-                        android:layout_marginEnd="70dp"
-                        android:layout_marginTop="100dp"
-                        android:text="UPDATE"
-                        android:onClick="sendToUpdateFuel"
-                        android:fontFamily="@font/comfortaa_bold"
-                        android:textColor="#B13A37"
-                        android:textSize="15sp"
-                        />
+                    android:id="@+id/updatefuel"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginEnd="70dp"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:onClick="sendToUpdateFuel"
+                    android:text="UPDATE"
+                    android:textColor="#B13A37"
+                    android:textSize="15sp" />
 
                 <Button
-                    android:id="@+id/delete_fuel"
+                    android:id="@+id/delete"
                     android:layout_width="120dp"
                     android:layout_height="50dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginStart="190dp"
-                    android:layout_marginEnd="70dp"
                     android:layout_marginTop="100dp"
-                    android:text="DELETE"
-                    android:onClick="sendToDeleteFuel"
+                    android:layout_marginEnd="70dp"
                     android:fontFamily="@font/comfortaa_bold"
+                    android:onClick="sendToDeleteFuel"
+                    android:text="DELETE"
                     android:textColor="#B13A37"
-                    android:textSize="15sp"
-                    />
+                    android:textSize="15sp" />
 
             </androidx.cardview.widget.CardView>
         </RelativeLayout>

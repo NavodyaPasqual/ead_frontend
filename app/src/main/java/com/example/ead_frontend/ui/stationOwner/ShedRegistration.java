@@ -1,8 +1,11 @@
 package com.example.ead_frontend.ui.stationOwner;
 
+import static com.example.ead_frontend.ui.EndPoints.EndPoints.SHED_REGISTRATION_URL;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -44,7 +47,7 @@ public class ShedRegistration extends AppCompatActivity{
 
     String sRegistrationNumber, sShedName, sShedAddress, sShedContactNumber;
 
-    String url = "http://192.168.43.136:8081/api/shed/register";
+    String url = SHED_REGISTRATION_URL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +101,26 @@ public class ShedRegistration extends AppCompatActivity{
                     editShedName.getText().clear();
                     editShedAddress.getText().clear();
                     editContactNumber.getText().clear();
+
+                    try {
+                        JSONObject jsonObj = new JSONObject(response);
+                        SharedPreferences sharedPreferences = getSharedPreferences("ShedData", MODE_PRIVATE);
+                        SharedPreferences.Editor SHED = sharedPreferences.edit();
+                        String RegNo = jsonObj.getString("regNo");
+                        String ShedName = jsonObj.getString("name");
+                        String Address = jsonObj.getString("address");
+                        String Number = jsonObj.getString("shedContactNo");
+
+                        SHED.putString("regNo", RegNo);
+                        SHED.putString("name", ShedName);
+                        SHED.putString("address", Address);
+                        SHED.putString("shedContactNo", Number);
+                        SHED.commit();
+
+                        Log.i("SHED", RegNo);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
                 }
             }, new Response.ErrorListener() {
                 @Override
