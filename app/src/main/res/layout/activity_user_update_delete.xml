@@ -194,20 +194,22 @@
                             android:layout_marginTop="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_marginBottom="5dp"
-                            android:hint="Password"
+                            android:hint="User Id"
                             android:textColorHint="#403C3C"
                             android:textSize="15sp" />
 
                         <EditText
-                            android:id="@+id/editPassword"
+                            android:id="@+id/editId"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="27dp"
                             android:layout_marginRight="5dp"
-                            android:background="@drawable/fund_border_blue"
-                            android:inputType="text"
+                            android:background="@drawable/disabled_background"
                             android:padding="10dp"
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:editable="false"
                             android:textColor="#686161"
                             android:textColorHint="#686161"
                             android:textSize="14sp" />

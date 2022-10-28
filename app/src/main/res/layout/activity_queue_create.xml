@@ -73,18 +73,21 @@
                             android:layout_marginTop="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_marginBottom="5dp"
-                            android:hint="@string/id"
+                            android:hint="@string/phone"
                             android:textColorHint="#403C3C"
                             android:textSize="15sp" />
 
-                        <Spinner
-                            android:id="@+id/spinnerId"
+                        <EditText
+                            android:id="@+id/idQC"
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="27dp"
                             android:layout_marginRight="5dp"
+                            android:autofillHints=""
                             android:background="@drawable/fund_border_blue"
+                            android:inputType="text"
+                            android:padding="10dp"
                             android:textColor="#686161"
                             android:textColorHint="#686161"
                             android:textSize="14sp" />
@@ -106,14 +109,17 @@
                             android:textColorHint="#403C3C"
                             android:textSize="15sp" />
 
-                        <Spinner
-                            android:id="@+id/spinnerNIC"
+                        <EditText
+                            android:id="@+id/nicQC"
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="27dp"
                             android:layout_marginRight="5dp"
+                            android:autofillHints=""
                             android:background="@drawable/fund_border_blue"
+                            android:inputType="text"
+                            android:padding="10dp"
                             android:textColor="#686161"
                             android:textColorHint="#686161"
                             android:textSize="14sp" />
@@ -136,7 +142,7 @@
                             android:textSize="15sp" />
 
                         <EditText
-                            android:id="@+id/shedName"
+                            android:id="@+id/shedNameQC"
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:layout_marginLeft="5dp"
@@ -160,7 +166,7 @@
                         android:layout_marginTop="120dp">
 
                         <Button
-                            android:id="@+id/buttonCreate"
+                            android:id="@+id/btnCreateQC"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
