@@ -71,7 +71,7 @@ public class ShedRegistration extends AppCompatActivity{
 
                 if (!sRegistrationNumber.isEmpty() && !sShedName.isEmpty() && !sShedAddress.isEmpty() && !sShedContactNumber.isEmpty()) {
                     registerShed();
-                    Toast.makeText(ShedRegistration.this, "New fuel station added ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ShedRegistration.this, "New fuel station added", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(ShedRegistration.this, "Fields cannot be empty", Toast.LENGTH_SHORT).show();
                 }

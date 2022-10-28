@@ -139,12 +139,12 @@
                         android:textSize="15dp" />
                 </RelativeLayout>
 
-                    <TextView
+                <Button
                         android:id="@+id/update_fuel"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="50dp"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginStart="70dp"
+                        android:layout_marginStart="80dp"
                         android:layout_marginEnd="70dp"
                         android:layout_marginTop="100dp"
                         android:text="UPDATE"
@@ -154,12 +154,12 @@
                         android:textSize="15sp"
                         />
 
-                <TextView
+                <Button
                     android:id="@+id/delete_fuel"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="50dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginStart="170dp"
+                    android:layout_marginStart="190dp"
                     android:layout_marginEnd="70dp"
                     android:layout_marginTop="100dp"
                     android:text="DELETE"
