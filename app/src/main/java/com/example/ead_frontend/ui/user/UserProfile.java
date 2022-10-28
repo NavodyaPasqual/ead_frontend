@@ -76,7 +76,7 @@ public class UserProfile extends AppCompatActivity {
     }
 
     private void deleteUser(String Password) {
-        String url = "http://192.168.1.5:8081/api/user/profile/delete/" + Password;
+        String url = "http://192.168.43.136:8081/api/user/profile/delete/" + Password;
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.DELETE, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
