@@ -31,10 +31,12 @@ import org.json.JSONObject;
 import org.w3c.dom.Text;
 
 import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class UserProfile extends AppCompatActivity {
 
-    TextView name, nic, nic2, email, number, password;
+    TextView name, nic, nic2, email, number, id;
     Button delete;
 
     @Override
@@ -47,7 +49,7 @@ public class UserProfile extends AppCompatActivity {
         nic2 = findViewById(R.id.nic2);
         email = findViewById(R.id.email);
         number = findViewById(R.id.number);
-        password = findViewById(R.id.password);
+        id = findViewById(R.id.id);
         delete = findViewById(R.id.delete);
 
         SharedPreferences sh = getSharedPreferences("UserData", MODE_PRIVATE);
@@ -56,7 +58,7 @@ public class UserProfile extends AppCompatActivity {
         String NIC2 = sh.getString("nic", "");
         String Email = sh.getString("email", "");
         String Number = sh.getString("number", "");
-        String Password = sh.getString("_id", "");
+        String Id = sh.getString("_id", "");
         String Token = sh.getString("token", "");
 
         name.setText(Name);
@@ -64,43 +66,39 @@ public class UserProfile extends AppCompatActivity {
         nic2.setText(NIC2);
         email.setText(Email);
         number.setText(Number);
-        password.setText(Password);
+        id.setText(Id);
 
-        delete.setOnClickListener(new View.OnClickListener() {
-              @Override
-              public void onClick(View view) {
-                  deleteUser(Password);
-              }
-          }
-        );
     }
 
-    private void deleteUser(String Password) {
-        String url = "http://192.168.43.136:8081/api/user/profile/delete/" + Password;
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.DELETE, url, null, new Response.Listener<JSONObject>() {
+    private void getByID () {
+        SharedPreferences sh = getSharedPreferences("UserData", MODE_PRIVATE);
+        String Id = sh.getString("_id", "");
+
+        id.setText(Id);
+
+        String url = "http://192.168.1.5:8081/api/user/profile/" + Id;
+        HttpHandler handler = new HttpHandler();
+        String jsonStr = handler.makeServiceCall(url);
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+
             @Override
-            public void onResponse(JSONObject response) {
-                try {
-                    if(response.getBoolean("success")) {
-                        Toast.makeText(UserProfile.this, "User Deleted", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(UserProfile.this, UserLogin.class);
-                        startActivity(intent);
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+            public void onResponse(String response) {
+                Log.i("USER", response);
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(UserProfile.this, error.toString(), Toast.LENGTH_SHORT).show();
+                Log.e("VOLLEY", error.toString());
             }
-        }
-        );
+        }) {
+            @Override
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
+            }
+        };
 
-        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(1000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(jsonObjectRequest);
+        requestQueue.add(stringRequest);
     }
 
     public void sendToHome(View view) {
@@ -109,9 +107,14 @@ public class UserProfile extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void actionLogout(View view) {
+        Intent intent = new Intent(this, UserLogin.class);
+        ImageButton button = (ImageButton) findViewById(R.id.back);
+        startActivity(intent);
+    }
+
     public void sendToEditProfile(View view) {
         Intent intent = new Intent(this, UserUpdateDelete.class);
-        Button button = (Button) findViewById(R.id.edit);
         startActivity(intent);
     }
 

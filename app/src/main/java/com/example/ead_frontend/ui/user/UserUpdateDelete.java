@@ -1,7 +1,9 @@
+///Write update delete with alert box
 package com.example.ead_frontend.ui.user;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.Image;
@@ -13,6 +15,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -22,6 +26,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.ead_frontend.R;
+import com.example.ead_frontend.ui.home.MainActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,12 +38,13 @@ public class UserUpdateDelete extends AppCompatActivity {
 
     TextView editFullName, editNIC, editEmail, editNumber, editId;
     Button button, button2;
+    AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_update_delete);
-
+        builder = new AlertDialog.Builder(this, R.style.MyDialogTheme);
         editFullName = findViewById(R.id.editFullName);
         editNIC = findViewById(R.id.editNIC);
         editEmail = findViewById(R.id.editEmail);
@@ -63,19 +69,55 @@ public class UserUpdateDelete extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String name = editFullName.getText().toString();
-                String nic = editNIC.getText().toString();
-                String email = editEmail.getText().toString();
-                String number = editNumber.getText().toString();
-                String id = editId.getText().toString();
-                updateUser(ID, name, nic, email, number, id);
+                builder.setMessage("Do you update your account ?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int ids) {
+                                String name = editFullName.getText().toString();
+                                String nic = editNIC.getText().toString();
+                                String email = editEmail.getText().toString();
+                                String number = editNumber.getText().toString();
+                                String id = editId.getText().toString();
+                                updateUser(ID, name, nic, email, number, id);
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int ids) {
+                                //  Action for 'NO' Button
+                                dialog.cancel();
+                                Toast.makeText(getApplicationContext(), "Canceled",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                //Setting the title manually
+                alert.setTitle("Alert");
+                alert.show();
             }
         });
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                deleteUser(ID);
+                builder.setMessage("Do you delete your account ?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int ids) {
+                                deleteUser(ID);
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int ids) {
+                                //  Action for 'NO' Button
+                                dialog.cancel();
+                                Toast.makeText(getApplicationContext(), "Canceled",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                //Setting the title manually
+                alert.setTitle("Alert");
+                alert.show();
             }
         });
     }
@@ -94,9 +136,9 @@ public class UserUpdateDelete extends AppCompatActivity {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    if(response.getBoolean("success")) {
+                    if (response.getBoolean("success")) {
                         Toast.makeText(UserUpdateDelete.this, "User updated", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(UserUpdateDelete.this, UserProfile.class);
+                        Intent intent = new Intent(UserUpdateDelete.this, MainActivity.class);
                         startActivity(intent);
                     }
                 } catch (JSONException e) {
@@ -130,7 +172,7 @@ public class UserUpdateDelete extends AppCompatActivity {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    if(response.getBoolean("success")) {
+                    if (response.getBoolean("success")) {
                         Toast.makeText(UserUpdateDelete.this, "User Deleted", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(UserUpdateDelete.this, UserLogin.class);
                         startActivity(intent);
@@ -154,7 +196,7 @@ public class UserUpdateDelete extends AppCompatActivity {
 
 
     public void sendToProfile(View view) {
-        Intent intent = new Intent(this,  UserProfile.class);
+        Intent intent = new Intent(this, UserProfile.class);
         ImageButton button = (ImageButton) findViewById(R.id.back);
         startActivity(intent);
     }

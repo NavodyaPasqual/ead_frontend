@@ -63,6 +63,19 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
+                        <Button
+                            android:id="@+id/buttonGetCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="42dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="42dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/queue_count"
+                            android:textColor="@color/red"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -71,18 +84,6 @@
                             android:layout_marginRight="20dp"
                             android:layout_marginBottom="20dp"
                             android:hint="@string/queue_count"
-                            android:textColorHint="#403C3C"
-                            android:textSize="30sp" />
-
-                        <EditText
-                            android:id="@+id/queueCount"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:autoText="true"
-                            android:autofillHints=""
-                            android:ems="10"
-                            android:hint="0"
-                            android:inputType="number"
                             android:paddingStart="10dp"
                             android:paddingLeft="10dp"
                             android:paddingTop="10dp"
@@ -91,7 +92,26 @@
                             android:paddingBottom="10dp"
                             android:textAlignment="center"
                             android:textColorHint="#78909C"
-                            android:textSize="60sp" />
+                            android:textSize="50sp" />
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/queueCount"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:autoText="true"-->
+<!--                            android:autofillHints=""-->
+<!--                            android:ems="10"-->
+<!--                            android:hint="0"-->
+<!--                            android:inputType="number"-->
+<!--                            android:paddingStart="10dp"-->
+<!--                            android:paddingLeft="10dp"-->
+<!--                            android:paddingTop="10dp"-->
+<!--                            android:paddingEnd="10dp"-->
+<!--                            android:paddingRight="10dp"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textColorHint="#78909C"-->
+<!--                            android:textSize="60sp" />-->
 
                     </LinearLayout>
 
