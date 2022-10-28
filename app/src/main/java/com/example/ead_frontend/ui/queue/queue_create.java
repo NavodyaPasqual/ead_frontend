@@ -25,7 +25,7 @@ import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.ead_frontend.R;
-import com.example.ead_frontend.ui.queue.queue_join;
+import com.example.ead_frontend.ui.queue.queue_exit;
 import com.example.ead_frontend.ui.user.UserLogin;
 import com.example.ead_frontend.ui.user.UserRegistration;
 
@@ -92,7 +92,7 @@ public class queue_create extends AppCompatActivity {
                     shedNameQC.getText().clear();
 
 
-                    Intent intent = new Intent(queue_create.this, queue_join.class);
+                    Intent intent = new Intent(queue_create.this, queue_exit.class);
                     startActivity(intent);
                 }
 
@@ -134,8 +134,8 @@ public class queue_create extends AppCompatActivity {
         }
     }
 
-    public void sendToQueueJoin(View view) {
-        Intent intent = new Intent(this,  queue_join.class);
+    public void sendToQueueExit(View view) {
+        Intent intent = new Intent(this,  queue_exit.class);
         Button button = (Button) findViewById(R.id.btnCreateQC);
         startActivity(intent);
     }

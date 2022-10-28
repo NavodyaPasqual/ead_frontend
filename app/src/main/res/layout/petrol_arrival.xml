@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.stationOwner.DieselArrival">
+    tools:context=".ui.stationOwner.PetrolArrival">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -77,7 +77,7 @@
                             android:textSize="15sp" />
 
                         <EditText
-                            android:id="@+id/petrol_available"
+                            android:id="@+id/editPetrolArrival"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"
                             android:layout_marginLeft="5dp"
@@ -108,7 +108,7 @@
                             android:textSize="15sp" />
 
                         <EditText
-                            android:id="@+id/petrol_arrival"
+                            android:id="@+id/editPetrolTime"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"
                             android:layout_marginLeft="5dp"
@@ -138,7 +138,7 @@
                             android:textSize="15sp" />
 
                         <EditText
-                            android:id="@+id/petrol_finish"
+                            android:id="@+id/editPetrolFinish"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"
                             android:layout_marginLeft="5dp"
@@ -168,7 +168,7 @@
                             android:textSize="15sp" />
 
                         <EditText
-                            android:id="@+id/diesel_available"
+                            android:id="@+id/editDieselArrival"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"
                             android:layout_marginLeft="5dp"
@@ -198,7 +198,7 @@
                             android:textSize="15sp" />
 
                         <EditText
-                            android:id="@+id/diesel_arrival"
+                            android:id="@+id/editDieselTime"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"
                             android:layout_marginLeft="5dp"
@@ -228,7 +228,7 @@
                             android:textSize="15sp" />
 
                         <EditText
-                            android:id="@+id/diesel_finish"
+                            android:id="@+id/editDieselFinish"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"
                             android:layout_marginLeft="5dp"

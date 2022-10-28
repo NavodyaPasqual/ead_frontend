@@ -10,6 +10,7 @@ public class EndPoints {
     public static String USER_LOGIN_URL = BASE_URL + "user/login";
 
     //Shed EndPoints
+    public static String SHED_REGISTRATION_URL = BASE_URL + "shed/register";
 
 
     //Queue Endpoints
