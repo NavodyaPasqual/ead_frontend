@@ -321,13 +321,13 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:fontFamily="@font/comfortaa_bold"
-                    android:text="Password"
+                    android:text="User ID"
                     android:textColor="@color/black"
                     android:textSize="14dp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/password"
+                    android:id="@+id/id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
